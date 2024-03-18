@@ -30,8 +30,6 @@ class LivroRepository {
 
   // Adicione mais métodos conforme necessário para suportar suas operações específicas
   
- 
-
 }
 
 export default LivroRepository;

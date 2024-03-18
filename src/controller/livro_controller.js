@@ -2,9 +2,9 @@ import LivroUseCase  from '../usecase/livro_usecase.js';
 
 const livroUseCase = new LivroUseCase();
 
-class LivroController {
+export default class LivroController {
   // Criar um novo usuário
-  async createLivro(req, res) {
+  static async createLivro(req, res) {
     try {
       const livro = await livroUseCase.createLivro(req.body);
       res.status(201).json(livro);
@@ -14,7 +14,7 @@ class LivroController {
   }
 
   // Obter detalhes de um livro pelo ID
-  async getLivroById(req, res) {
+  static async getLivroById(req, res) {
     try {
       const livro = await livroUseCase.getLivroById(req.params.id);
       res.status(200).json(livro);
@@ -24,7 +24,7 @@ class LivroController {
   }
 
   // Atualizar um livro pelo ID
-  async updateLivro(req, res) {
+   static async updateLivro(req, res) {
     try {
       const updatedLivro = await livroUseCase.updateLivro(req.params.id, req.body);
       res.status(200).json(updatedLivro);
@@ -34,7 +34,7 @@ class LivroController {
   }
 
   // Deletar um usuário pelo ID
-  async deleteLivro(req, res) {
+   static async deleteLivro(req, res) {
     try {
       await livroUseCase.deleteLivro(req.params.id);
       res.status(204).send(); // No Content
@@ -44,7 +44,7 @@ class LivroController {
   }
 
   // Listar todos os usuários
-  async listLivro(req, res) {
+   static async listLivro(req, res) {
     try {
       const livro = await livroUseCase.listLivro();
       res.status(200).json(users);
@@ -54,4 +54,4 @@ class LivroController {
   }
 }
 
-export default LivroController ;
+
