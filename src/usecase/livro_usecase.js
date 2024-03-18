@@ -37,7 +37,7 @@ class LivroUseCase {
   }
 
   async listLivros() {
-    return livroRepository.findAll();
+    return await livroRepository.findAll();
   }
 }
 

@@ -46,8 +46,8 @@ export default class LivroController {
   // Listar todos os usuários
    static async listLivro(req, res) {
     try {
-      const livro = await livroUseCase.listLivro();
-      res.status(200).json(users);
+      const livro = await livroUseCase.listLivros();
+      res.status(200).json(livro);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }

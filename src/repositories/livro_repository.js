@@ -2,9 +2,10 @@ import Livro from '../entity/livro_entity.js';
 
 class LivroRepository {
   // Cria um novo livro
+
   async create(livroData) {
     const livro = new Livro(livroData);
-    await Livro.save();
+    await livro.save();
     return livro;
   }
 
@@ -25,8 +26,10 @@ class LivroRepository {
 
   // Lista todos os usuários (Você pode querer implementar paginação)
   async findAll() {
-    return Livro.find({});
+    return await Livro.find({});
   }
+
+ 
 
   // Adicione mais métodos conforme necessário para suportar suas operações específicas
   

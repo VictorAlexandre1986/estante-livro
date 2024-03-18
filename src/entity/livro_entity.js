@@ -20,5 +20,7 @@ const livroSchema = new mongoose.Schema({
   }
 });
 
+const Livro = mongoose.model('livraria', livroSchema);
+
 // module.exports = mongoose.model('Livro', userSchema);
-export default livroSchema;
+export default Livro;
