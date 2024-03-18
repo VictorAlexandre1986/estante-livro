@@ -1,0 +1,21 @@
+Rotas
+
+Get all : http://localhost:3000/livros
+
+Post: http://localhost:3000/livro
+{
+		"titulo":"Outsider",
+		"autor":"Stephen King",
+		"paginas":500
+}
+
+Get Id : http://localhost:3000/livro/65f8afd80fd4d9b303d9e544
+
+Patch : http://localhost:3000/livro/65f8afd80fd4d9b303d9e544
+{
+		"titulo":"Teste",
+		"autor":"Stephen King",
+		"paginas":450
+}
+
+Delete : http://localhost:3000/livro/65f8afd80fd4d9b303d9e544
